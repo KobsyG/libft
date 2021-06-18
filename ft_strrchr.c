@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeco <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gbeco <gbeco@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 02:35:08 by gbeco             #+#    #+#             */
-/*   Updated: 2020/11/25 16:37:01 by gbeco            ###   ########lyon.fr   */
+/*   Updated: 2021/03/24 08:51:58 by gbeco            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char*)&s[i]);
+			return ((char *)&s[i]);
 		i--;
 	}
 	return (NULL);

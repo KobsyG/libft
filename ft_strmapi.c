@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeco <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gbeco <gbeco@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 14:25:36 by gbeco             #+#    #+#             */
-/*   Updated: 2020/11/26 14:54:04 by gbeco            ###   ########lyon.fr   */
+/*   Updated: 2021/03/24 10:18:48 by gbeco            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*s2;
 	unsigned int	i;
 
-	if (!(s2 = ft_strdup(s)))
+	s2 = ft_strdup(s);
+	if (s2 == NULL)
 		return (NULL);
 	i = 0;
 	while (s2[i])

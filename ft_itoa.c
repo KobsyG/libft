@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeco <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gbeco <gbeco@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/26 13:15:19 by gbeco             #+#    #+#             */
-/*   Updated: 2021/01/10 10:08:05 by gbeco            ###   ########lyon.fr   */
+/*   Updated: 2021/03/24 09:52:01 by gbeco            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	nbrdigit(long n)
 {
-	int len;
+	int	len;
 
 	if (n <= 0)
 	{
@@ -31,7 +31,7 @@ static int	nbrdigit(long n)
 	return (len);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int		len;
 	char	*nbr;
@@ -39,7 +39,7 @@ char		*ft_itoa(int n)
 
 	nb = n;
 	len = nbrdigit(nb);
-	if (!(nbr = malloc(sizeof(char) * len + 1)))
+	if (ft_salloc(&nbr, sizeof(char) * (len + 1)))
 		return (NULL);
 	if (nb == 0)
 		nbr[0] = '0';

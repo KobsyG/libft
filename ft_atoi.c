@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeco <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gbeco <gbeco@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 17:16:54 by gbeco             #+#    #+#             */
-/*   Updated: 2020/11/25 13:41:08 by gbeco            ###   ########lyon.fr   */
+/*   Updated: 2021/03/24 08:34:48 by gbeco            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int nbr;
-	int i;
-	int signe;
+	int	nbr;
+	int	i;
+	int	signe;
 
 	nbr = 0;
 	i = 0;

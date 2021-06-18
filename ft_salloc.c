@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_salloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gbeco <gbeco@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/23 02:28:28 by gbeco             #+#    #+#             */
-/*   Updated: 2021/03/24 08:49:23 by gbeco            ###   ########lyon.fr   */
+/*   Created: 2021/03/24 08:43:18 by gbeco             #+#    #+#             */
+/*   Updated: 2021/03/24 10:18:03 by gbeco            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_salloc(char **s, int size)
 {
-	size_t			i;
-	unsigned char	*s2;
-
-	i = 0;
-	s2 = (unsigned char *)s;
-	while (i < n)
-	{
-		s2[i] = 0;
-		i++;
-	}
+	*s = malloc(size);
+	if (s == NULL)
+		return (1);
+	return (0);
 }

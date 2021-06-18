@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeco <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gbeco <gbeco@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 17:18:14 by gbeco             #+#    #+#             */
-/*   Updated: 2020/11/25 17:20:47 by gbeco            ###   ########lyon.fr   */
+/*   Updated: 2021/03/24 08:50:49 by gbeco            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	unsigned char	*psrc;
 	size_t			i;
 
-	pdst = (unsigned char*)dst;
-	psrc = (unsigned char*)src;
+	pdst = (unsigned char *)dst;
+	psrc = (unsigned char *)src;
 	if (!dst && !src)
 		return (dst);
 	if (dst < src)

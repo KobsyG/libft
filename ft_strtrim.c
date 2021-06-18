@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeco <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gbeco <gbeco@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 02:37:49 by gbeco             #+#    #+#             */
-/*   Updated: 2021/01/10 10:06:35 by gbeco            ###   ########lyon.fr   */
+/*   Updated: 2021/06/02 10:55:52 by gbeco            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	isset(char c, char const *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (set[i])
@@ -28,7 +28,7 @@ static int	isset(char c, char const *set)
 
 static int	isstart(char const *s1, char const *set)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (isset(s1[i], set) == 1)
@@ -40,7 +40,7 @@ static int	isstart(char const *s1, char const *set)
 
 static int	isend(char const *s1, char const *set)
 {
-	int i;
+	int	i;
 
 	i = ft_strlen(s1) - 1;
 	while (isset(s1[i], set) == 1)
@@ -50,7 +50,7 @@ static int	isend(char const *s1, char const *set)
 	return (i);
 }
 
-char		*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	start;
@@ -58,15 +58,15 @@ char		*ft_strtrim(char const *s1, char const *set)
 	char	*s2;
 
 	start = isstart(s1, set);
-	if (start == ft_strlen(s1))
+	if (start == (size_t)ft_strlen(s1))
 	{
-		if (!(s2 = malloc(sizeof(char))))
+		if (ft_salloc(&s2, sizeof(char)))
 			return (NULL);
 		s2[0] = 0;
 		return (s2);
 	}
 	end = isend(s1, set);
-	if (!(s2 = malloc(sizeof(char) * (end - start + 2))))
+	if (ft_salloc(&s2, sizeof(char) * (end - start + 2)))
 		return (NULL);
 	i = 0;
 	while (start <= end)

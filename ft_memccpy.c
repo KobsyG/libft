@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbeco <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: gbeco <gbeco@student.42lyon.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 02:30:59 by gbeco             #+#    #+#             */
-/*   Updated: 2020/11/25 16:47:58 by gbeco            ###   ########lyon.fr   */
+/*   Updated: 2021/03/24 08:50:10 by gbeco            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	unsigned char	*pdst;
 	unsigned char	*psrc;
 
-	pdst = (unsigned char*)dst;
-	psrc = (unsigned char*)src;
+	pdst = (unsigned char *)dst;
+	psrc = (unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
